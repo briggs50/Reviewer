@@ -206,9 +206,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705010029122_movie.cs" />
-    <Compile Include="Migrations\201705010029122_movie.Designer.cs">
-      <DependentUpon>201705010029122_movie.cs</DependentUpon>
+    <Compile Include="Migrations\201705010231521_init.cs" />
+    <Compile Include="Migrations\201705010231521_init.Designer.cs">
+      <DependentUpon>201705010231521_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -246,6 +246,10 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\briggs50Reviewer - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\briggs50Reviewer - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\briggs50Reviewer - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\briggs50Reviewer - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -313,6 +317,15 @@
     <Content Include="Views\IdentityRoles\Edit.cshtml" />
     <Content Include="Views\IdentityRoles\Index.cshtml" />
     <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Account\AddRoleToUser.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Search.cshtml" />
+    <Content Include="Views\Account\ViewUserRoles.cshtml" />
+    <Content Include="Views\Error\AccessDenied.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,8 +341,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705010029122_movie.resx">
-      <DependentUpon>201705010029122_movie.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705010231521_init.resx">
+      <DependentUpon>201705010231521_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

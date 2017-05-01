@@ -7,13 +7,13 @@ namespace briggs50_Reviewer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class movie : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(movie));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705010029122_movie"; }
+            get { return "201705010231521_init"; }
         }
         
         string IMigrationMetadata.Source
