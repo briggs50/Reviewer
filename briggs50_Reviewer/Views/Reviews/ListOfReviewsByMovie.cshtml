@@ -1,0 +1,29 @@
+﻿@model IEnumerable<briggs50_Reviewer.Models.Review>
+
+@{
+    ViewBag.Title = "ListOfReviewsByMovie";
+}
+
+<h2>Reviews for @ViewBag.MovieTitle</h2>
+
+<table class="table">
+    @foreach (var review in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => review.DateCreated)
+
+            </td>
+            <td>@Html.DisplayFor(modelItem => review.Content)</td>
+            <td>
+                @Html.DisplayFor(modelItem => review.Rating)
+            </td>
+
+        </tr>
+    }
+</table>
+
+
+@Html.ActionLink("Add a Review", "Create", "Reviews", new { ID = ViewBag.MovieID }, null)
+@Html.ActionLink("Return to move list", "ListMovies", "Movies")
+

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<briggs50_Reviewer.Models.Movie>
+@{
+    ViewBag.Title = "ListMovies";
+}
+<h2>Movies-R-Us</h2>
+@{Html.BeginForm("Search", "Movies", FormMethod.Get);}
+<input type="text" name="q" value="" />
+<input type="submit" value="Search" />
+@{Html.EndForm();}
+&nbsp;
+
+@*<div class="form-group">
+        @Html.Label("Filter by Category", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.DropDownList("categoryFilter",
+                     new SelectList(@ViewBag.Categories),
+                     "Categories",
+                     new { @class = "form-control" })
+    </div>*@
+
+
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Title, "Details", new { id = item.ID }) <br />
+                @Html.DisplayFor(modelItem => item.Category) <br />
+                @Html.ActionLink("Reviews", "ListOfReviewsByMovie", "Reviews", new { id = item.ID }, null)
+            </td>
+        </tr>
+    }
+</table>
